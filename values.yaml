@@ -87,8 +87,8 @@ runtimeClassName: ""
 ## AccessKey and secretKey is generated when not set
 ## Distributed MinIO ref: https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-multi-node-multi-drive.html
 ##
-rootUser: ""
-rootPassword: ""
+rootUser: "test"
+rootPassword: "test"
 
 ## Use existing Secret that store following variables:
 ##
@@ -117,7 +117,7 @@ bucketRoot: ""
 # Number of drives attached to a node
 drivesPerNode: 1
 # Number of MinIO containers running
-replicas: 16
+replicas: 4
 # Number of expanded MinIO clusters
 pools: 1
 
@@ -159,7 +159,7 @@ persistence:
   storageClass: ""
   volumeName: ""
   accessMode: ReadWriteOnce
-  size: 500Gi
+  size: 50Gi
 
   ## If subPath is set mount a sub folder of a volume instead of the root of the volume.
   ## This is especially handy for volume plugins that don't natively support sub mounting (like glusterfs).
@@ -257,7 +257,7 @@ podLabels: {}
 ##
 resources:
   requests:
-    memory: 16Gi
+    memory: 4Gi
 
 ## List of policies to be created after minio install
 ##
