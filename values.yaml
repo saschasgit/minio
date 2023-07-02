@@ -87,8 +87,8 @@ runtimeClassName: ""
 ## AccessKey and secretKey is generated when not set
 ## Distributed MinIO ref: https://min.io/docs/minio/linux/operations/install-deploy-manage/deploy-minio-multi-node-multi-drive.html
 ##
-rootUser: "test"
-rootPassword: "test"
+rootUser: "testtest"
+rootPassword: "testtest"
 
 ## Use existing Secret that store following variables:
 ##
@@ -156,7 +156,7 @@ persistence:
   ##
   ## Storage class of PV to bind. By default it looks for standard storage class.
   ## If the PV uses a different storage class, specify that here.
-  storageClass: ""
+  storageClass: "crc-csi-hostpath-provisioner"
   volumeName: ""
   accessMode: ReadWriteOnce
   size: 50Gi

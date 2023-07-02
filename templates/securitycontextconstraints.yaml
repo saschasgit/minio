@@ -31,6 +31,8 @@ fsGroup:
 runAsUser:
   type: MustRunAs
   uid: {{ .Values.securityContext.runAsUser }}
+users: 
+- system:serviceaccount:minio:minio-sa
 seLinuxContext:
   type: MustRunAs
 supplementalGroups:

@@ -1,0 +1,20 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: minio-own-git-console
+  namespace: minio
+  labels:
+    app: minio
+    app.kubernetes.io/instance: minio-own-git
+    chart: minio-5.0.9
+    heritage: Helm
+    release: minio-own-git
+spec:
+  host: minio-own-git-console-minio.apps-crc.testing
+  to:
+    kind: Service
+    name: minio-own-git-console
+    weight: 100
+  port:
+    targetPort: http
+  wildcardPolicy: None
